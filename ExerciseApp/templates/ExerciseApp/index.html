@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django Page</title>
+    <link rel="stylesheet" href="{% static 'ExerciseApp/css/style.css' %}">
+    <link rel="icon" href="{% static 'ExerciseApp/assets/favicon.ico' %}" type="image/x-icon">
+    <script defer src="{% static 'ExerciseApp/js/script.js' %}"></script>
+</head>
+<body>
+    <header>    
+        <div>        
+            <h2>DreamSpace</h2>
+            <img src="{% static 'ExerciseApp/assets/logo.png' %}" alt="DreamSpace logo">
+        </div>
+        <img class="django-logo" src="{% static 'ExerciseApp/assets/django.png' %}" alt="Django Logo">
+    </header>
+    <main>
+        <section class="page-1">
+            <div>
+                <h1 class="pulsating-light">Django</h1>
+                <h2 id="changing-text" class="animated-text">Web Framework</h2>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

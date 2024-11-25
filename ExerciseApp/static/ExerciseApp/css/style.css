@@ -1,0 +1,133 @@
+@font-face {
+    font-family: Nexa-Heavy;
+    src: local(Nexa-Heavy), url(../assets/Nexa-Heavy.ttf);
+}
+
+:root {
+    --Primary: #303030;
+    --Secondary: #5653f3;
+    --text-light: white;
+    --text-contrast: #5653f3;
+    --primary-textfont: 'Nexa-Heavy';
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--primary-textfont);
+}
+
+body {
+    background-color: var(--Primary);
+    color: var(--text-light);
+}
+
+header {
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6rem;
+    background-color: rgb(31, 31, 31);
+}
+
+header div {
+    display: flex;
+    align-items: center;
+    color: var(--text-light);
+}
+
+header div img {
+    height: 2rem;
+    margin-left: 0.5rem;
+}
+
+.django-logo {
+    height: 100%;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.page-1 {
+    width: 100%;
+    height: 93vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../assets/background.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+}
+
+.page-1 div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.page-1 h1 {
+    font-size: 20rem;
+    margin: -2rem;
+    color: white;
+    position: relative;
+    animation: pulse-light 4s infinite;
+}
+
+@keyframes pulse-light {
+    0%, 100% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.030), 0 0 30px rgba(255, 255, 255, 0.020), 0 0 40px rgba(255, 255, 255, 0.010);
+    }
+    50% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.062), 0 0 20px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 255, 255, 0.014);
+    }
+}
+
+.page-1 h2 {
+    font-size: 4rem;
+    color: var(--text-contrast);
+}
+
+.animated-text {
+    position: relative;
+    display: inline-block;
+}
+
+/* Animação de saída */
+.fade-out {
+    animation: fadeOut 0.5s forwards;
+}
+
+/* Animação de entrada */
+.fade-in {
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
